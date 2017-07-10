@@ -4,6 +4,7 @@
 
 (require 'init-packages)
 (require 'init-ui)
+(require 'init-better-defaults)
 
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
@@ -15,12 +16,11 @@
 
 (defun open-my-init-file()
   (interactive)
-  (find-file "~/.emacs.d/init.el"))
+  (find-file "~/.emacs.d/init.el")) 
 
-(global-set-key (kbd "<f2>") 'open-my-init-file)
+(global-set-key (kbd "<f2>") 'open-my-init-file) 
 
 (global-company-mode t)
-
 
 (setq make-backup-files nil)
 
@@ -38,6 +38,9 @@
 
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
 
+;去掉自动保存
+(setq make-backup-files nil)
+(setq auto-save-default nil)
 
 (global-set-key (kbd "C-h C-f") 'find-function)
 (global-set-key (kbd "C-h C-v") 'find-variable)
@@ -63,5 +66,3 @@
  ;; If there is more than one, they won't work right.
  '(js2-external-variable ((t (:foreground "dark gray")))))
 
-;;去掉顶部的声音
-(setq ring-bell-function 'ignore)
