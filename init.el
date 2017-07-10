@@ -2,67 +2,18 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-(require 'init-packages)
-(require 'init-ui)
-(require 'init-better-defaults)
-
-(global-set-key "\C-s" 'swiper)
-(global-set-key (kbd "C-c C-r") 'ivy-resume)
-(global-set-key (kbd "M-x") 'counsel-M-x)
-(global-set-key (kbd "C-x C-f") 'counsel-find-file)
-(global-set-key (kbd "C-h f") 'counsel-describe-function)
-(global-set-key (kbd "C-h v") 'counsel-describe-variable)
-
-
-(defun open-my-init-file()
+(defun open-my-init-file()  
   (interactive)
   (find-file "~/.emacs.d/init.el")) 
 
-(global-set-key (kbd "<f2>") 'open-my-init-file) 
+(require 'init-packages)
+(require 'init-ui)
+(require 'init-better-defaults)
+(require 'init-org)
+(require 'init-keybindings)
+(require 'custom)
 
-(global-company-mode t)
-
-(setq make-backup-files nil)
-
-(require 'org)
-
-(setq org-src-fontify-natively t)
+(setq custom-file (expand-file-name "lisp/custom.el" user-emacs-directory))
 
 
-(require 'recentf)
-(recentf-mode 1)			
-(setq recentf-max-menu-items 25)
-(global-set-key "\C-x\ \C-r" 'recentf-open-files)
-
-(delete-selection-mode t)
-
-(add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
-
-;去掉自动保存
-(setq make-backup-files nil)
-(setq auto-save-default nil)
-
-(global-set-key (kbd "C-h C-f") 'find-function)
-(global-set-key (kbd "C-h C-v") 'find-variable)
-(global-set-key (kbd "C-h C-k") 'find-function-on-key)
-
- (setq org-agenda-files '("~/org"))
-  (global-set-key (kbd "C-c a") 'org-agenda)
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(company-idle-delay 0.08)
- '(company-minimum-prefix-length 1)
- '(custom-safe-themes
-   (quote
-    ("6c62b1cd715d26eb5aa53843ed9a54fc2b0d7c5e0f5118d4efafa13d7715c56e" default))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(js2-external-variable ((t (:foreground "dark gray")))))
 

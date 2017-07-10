@@ -64,9 +64,14 @@
 
 (global-linum-mode t)
 
-(provide 'init-packages)
+(delete-selection-mode t)
+
+(global-company-mode t)
 
 (load-theme 'monokai t)
 
 (require 'popwin) ;;when require, wh(setq company-minimum-prefix-length 1)en not require
 (popwin-mode t)
+
+
+(provide 'init-packages)
