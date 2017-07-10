@@ -2,10 +2,8 @@
 
 (add-to-list 'load-path "~/.emacs.d/lisp/")
 
-;; Package Management
-;; -----------------------------------------------------------------
 (require 'init-packages)
-
+(require 'init-ui)
 
 (global-set-key "\C-s" 'swiper)
 (global-set-key (kbd "C-c C-r") 'ivy-resume)
@@ -15,12 +13,6 @@
 (global-set-key (kbd "C-h v") 'counsel-describe-variable)
 
 
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-
-(setq inhibit-splash-screen t)
-
-
 (defun open-my-init-file()
   (interactive)
   (find-file "~/.emacs.d/init.el"))
@@ -28,10 +20,9 @@
 (global-set-key (kbd "<f2>") 'open-my-init-file)
 
 (global-company-mode t)
-(setq-default cursor-type 'bar)
+
 
 (setq make-backup-files nil)
-
 
 (require 'org)
 
@@ -45,12 +36,7 @@
 
 (delete-selection-mode t)
 
-;;(setq  initial-frame-alist (quote ((fullscreen . maximized))))
-
 (add-hook 'emacs-lisp-mode-hook 'show-paren-mode)
-
-(global-hl-line-mode t)
-
 
 
 (global-set-key (kbd "C-h C-f") 'find-function)
@@ -76,10 +62,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(js2-external-variable ((t (:foreground "dark gray")))))
-
-;; 更改显示字体大小 13pt
-;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
-(set-face-attribute 'default nil :height 130)
 
 ;;去掉顶部的声音
 (setq ring-bell-function 'ignore)

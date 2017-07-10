@@ -4,6 +4,7 @@
 ;;                      __   ___        ___      ___
 ;; |\/|  /\  |\ |  /\  / _` |__   |\/| |__  |\ |  |
 ;; |  | /~~\ | \| /~~\ \__> |___  |  | |___ | \|  |
+(package-initialize)
 
 (when (>= emacs-major-version 24)
     (package-initialize)
@@ -51,8 +52,6 @@
 (require 'smartparens-config)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 (smartparens-global-mode t)
-			   
-
 ;; config js2-mode for js files
 (setq auto-mode-alist
 	  (append
@@ -69,7 +68,5 @@
 
 (load-theme 'monokai t)
 
-
-(require 'init-packages)
 (require 'popwin) ;;when require, wh(setq company-minimum-prefix-length 1)en not require
 (popwin-mode t)
