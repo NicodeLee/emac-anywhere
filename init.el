@@ -91,9 +91,6 @@
 
 (setq org-src-fontify-natively t)
 
-;; 更改显示字体大小 14pt
-;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
-(set-face-attribute 'default nil :height 140)
 
 (require 'recentf)
 (recentf-mode 1)			
@@ -133,3 +130,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(js2-external-variable ((t (:foreground "dark gray")))))
+
+;; 更改显示字体大小 14pt
+;; http://stackoverflow.com/questions/294664/how-to-set-the-font-size-in-emacs
+(set-face-attribute 'default nil :height 140)
