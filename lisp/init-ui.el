@@ -13,4 +13,4 @@
 
 (global-hl-line-mode t)
 
-(provide 'init-ui )
+(provide 'init-ui)
