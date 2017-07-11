@@ -8,7 +8,7 @@
 
 (global-set-key "\C-x\ \C-r" 'recentf-open-files)
  
-(global-set-key (kbd "<f2>") 'open-my-init-file)
+(global-set-key (kbd "<f3>") 'open-my-init-file)
 
 (global-set-key (kbd "C-h C-f") 'find-function)
 (global-set-key (kbd "C-h C-v") 'find-variable)
