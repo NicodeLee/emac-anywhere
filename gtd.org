@@ -7,6 +7,7 @@
 
 ** TODO [#B] Clean up our Emacs configs
 
+** TODO [#B] 学下day6视频
 
 * Quick notes
 
